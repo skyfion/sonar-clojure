@@ -13,7 +13,7 @@ import static java.util.Arrays.asList;
 public class Properties {
 
     public static final String FILE_SUFFIXES_PROPERTY = "sonar.clojure.file.suffixes";
-    public static final String FILE_SUFFIXES_PROPERTY_DEFAULT = "clj,cljs,cljc";
+    public static final String FILE_SUFFIXES_PROPERTY_DEFAULT = ".clj,.cljs,.cljc";
     public static final String SENSORS_TIMEOUT_PROPERTY = "sonar.clojure.sensors.timeout";
     public static final String SENSORS_TIMEOUT_PROPERTY_DEFAULT = "300";
     public static final String MAIN_CATEGORY = "SonarClojure";

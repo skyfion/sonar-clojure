@@ -1,6 +1,8 @@
 package org.sonar.plugins.clojure;
 
 import org.sonar.api.Plugin;
+import org.sonar.api.config.PropertyDefinition;
+import org.sonar.api.resources.Qualifiers;
 import org.sonar.plugins.clojure.language.Clojure;
 import org.sonar.plugins.clojure.language.ClojureSonarWayProfile;
 import org.sonar.plugins.clojure.rules.ClojureLintRulesDefinition;
@@ -30,5 +32,16 @@ public class ClojurePlugin implements Plugin {
         context.addExtension(LeinNvdSensor.class);
         context.addExtension(ClojureSensor.class);
         context.addExtension(KondoSensor.class);
+
+        context.addExtension(
+                PropertyDefinition.builder(Properties.FILE_SUFFIXES_PROPERTY)
+                        .name("File Suffixes")
+                        .description("List of suffixes of Clojure files to analyze.")
+                        .multiValues(true)
+                        .category("Clojure")
+                        .subCategory("General")
+                        .onQualifiers(Qualifiers.PROJECT)
+                        .defaultValue(String.join(",", Properties.FILE_SUFFIXES_PROPERTY_DEFAULT.split(",")))
+                        .build());
     }
 }

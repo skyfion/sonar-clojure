@@ -26,7 +26,8 @@ public class LeinNvdSensor extends AbstractSensor implements Sensor {
 
     private static final Logger LOG = Loggers.get(LeinNvdSensor.class);
 
-    private static final String[] LEIN_ARGUMENTS = {"nvd", "check"};
+    private static final String[] LEIN_ARGUMENTS = {"dependency-check", "--output-format", ":json",
+            "--output-directory", "target"};
     private static final String PLUGIN_NAME = "NVD";
 
     @SuppressWarnings("WeakerAccess")

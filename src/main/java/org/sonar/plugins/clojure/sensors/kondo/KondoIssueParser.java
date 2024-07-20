@@ -1,6 +1,5 @@
 package org.sonar.plugins.clojure.sensors.kondo;
 
-import org.sonar.api.internal.google.common.collect.Lists;
 import org.sonar.plugins.clojure.sensors.CommandStreamConsumer;
 import us.bpsm.edn.Keyword;
 import us.bpsm.edn.parser.Parseable;
@@ -16,7 +15,7 @@ import static us.bpsm.edn.Keyword.newKeyword;
 import static us.bpsm.edn.parser.Parsers.defaultConfiguration;
 
 public class KondoIssueParser {
-    public static List<Finding> parse(CommandStreamConsumer stdOut) {
+    public static List parse(CommandStreamConsumer stdOut) {
         if (stdOut == null){
             return Collections.EMPTY_LIST;
         }
