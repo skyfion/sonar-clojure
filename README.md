@@ -17,7 +17,7 @@
 
 ## Installation
 In order to install SonarClojure:
-1. Download the [latest](https://github.com/fsantiag/sonar-clojure/releases) jar of the plugin.
+1. Download the [latest](https://github.com/skyfion/sonar-clojure/releases) jar of the plugin.
 2. Place the jar in the SonarQube server plugins directory, usually located under: `/opt/sonarqube/extensions/plugins/`
 3. Restart the SonarQube server.
 
