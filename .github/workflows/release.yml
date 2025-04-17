@@ -20,7 +20,7 @@ jobs:
           cache: 'maven'
       - run: mvn clean package -DskipTests
       - run: mkdir staging && cp target/*.jar staging
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3.1.0
         with:
           name: Package
           path: staging
