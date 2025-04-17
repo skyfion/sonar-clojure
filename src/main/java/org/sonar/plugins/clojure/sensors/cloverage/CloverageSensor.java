@@ -22,7 +22,6 @@ public class CloverageSensor extends AbstractSensor implements Sensor {
 
     private static final Logger LOG = Loggers.get(CloverageSensor.class);
     private static final String PLUGIN_NAME = "Cloverage";
-    private static final String[] LEIN_ARGUMENTS = {"cloverage", "--codecov"};
 
     @SuppressWarnings("WeakerAccess")
     public CloverageSensor(LeiningenRunner leiningenRunner) {
@@ -42,8 +41,8 @@ public class CloverageSensor extends AbstractSensor implements Sensor {
 
             long timeOut = context.config().getLong(SENSORS_TIMEOUT_PROPERTY)
                     .orElse(Long.valueOf(SENSORS_TIMEOUT_PROPERTY_DEFAULT));
-
-            this.leiningenRunner.run(timeOut, LEIN_ARGUMENTS[0], LEIN_ARGUMENTS[1]);
+ // with-profile test_cicd kaocha --focus :unit --plugin cloverage
+            this.leiningenRunner.run(timeOut, "cloverage", "--codecov");
 
             String reportPath = context.config().get(REPORT_LOCATION_PROPERTY).orElse(REPORT_LOCATION_DEFAULT);
             LOG.debug("Using report file: " + reportPath);

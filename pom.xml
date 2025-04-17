@@ -6,11 +6,11 @@
 
     <groupId>org.sonar.plugins.clojure</groupId>
     <artifactId>sonar-clojure-plugin</artifactId>
-    <version>2.3.0ux</version>
+    <version>2.3.1ux</version>
     <packaging>sonar-plugin</packaging>
     <name>sonar-clojure</name>
     <description>SonarClojure is a plugin for SonarQube to analyze Clojure source.</description>
-    <url>https://github.com/fsantiag/sonar-clojure</url>
+    <url>https://github.com/skyfion/sonar-clojure</url>
 
     <dependencies>
         <dependency>

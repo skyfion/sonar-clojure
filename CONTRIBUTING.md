@@ -31,7 +31,7 @@ You can contribute to SonarClojure by submitting a feature request or reporting 
  issue using the appropriate template. Follow the guidelines provided in the template.
 
 ### Code Contributions
-Have a look in the [issues](https://github.com/fsantiag/sonar-clojure/issues) we have opened. If it is 
+Have a look in the [issues](https://github.com/skyfion/sonar-clojure/issues) we have opened. If it is 
 your first time, the ones with the tag `good first issue` might be a good idea. If you want to explore something more
 challenging, feel free to have a look into the other tags: `feature`, `help wanted`, `bug`. In any case, make sure to reply
  in the issue so we know you are working on it.

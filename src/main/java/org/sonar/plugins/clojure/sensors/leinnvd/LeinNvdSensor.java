@@ -26,8 +26,6 @@ public class LeinNvdSensor extends AbstractSensor implements Sensor {
 
     private static final Logger LOG = Loggers.get(LeinNvdSensor.class);
 
-    private static final String[] LEIN_ARGUMENTS = {"dependency-check", "--output-format", ":json",
-            "--output-directory", "target"};
     private static final String PLUGIN_NAME = "NVD";
 
     @SuppressWarnings("WeakerAccess")
@@ -50,7 +48,7 @@ public class LeinNvdSensor extends AbstractSensor implements Sensor {
 
             long timeOut = context.config().getLong(SENSORS_TIMEOUT_PROPERTY)
                     .orElse(Long.valueOf(SENSORS_TIMEOUT_PROPERTY_DEFAULT));
-            this.leiningenRunner.run(timeOut, LEIN_ARGUMENTS[0], LEIN_ARGUMENTS[1]);
+            this.leiningenRunner.run(timeOut, "dependency-check");
 
             Optional<String> vulnerabilityContext = readFromFileSystem(reportPath);
             if (vulnerabilityContext.isPresent()) {

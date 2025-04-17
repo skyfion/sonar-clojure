@@ -1,12 +1,6 @@
 # SonarClojure
 > A SonarQube plugin to analyze Clojure source.
 
-[![Build Status](https://travis-ci.org/fsantiag/sonar-clojure.svg?branch=master)](https://travis-ci.org/fsantiag/sonar-clojure)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=org.sonar.plugins.clojure%3Asonar-clojure-plugin&metric=alert_status
-)](https://sonarcloud.io/dashboard?id=org.sonar.plugins.clojure%3Asonar-clojure-plugin)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=org.sonar.plugins.clojure%3Asonar-clojure-plugin&metric=coverage
-)](https://sonarcloud.io/dashboard?id=org.sonar.plugins.clojure%3Asonar-clojure-plugin)
-
 ## Current State
 
 ### Features:
@@ -96,4 +90,4 @@ At the moment, SonarClojure supports up to version 8.6.1 of SonarQube.
 
 ## License
 
-SonarClojure is open-sourced software licensed under the [MIT license](https://github.com/fsantiag/sonar-clojure/blob/master/LICENSE).
+SonarClojure is open-sourced software licensed under the [MIT license](https://github.com/skyfion/sonar-clojure/blob/master/LICENSE).
